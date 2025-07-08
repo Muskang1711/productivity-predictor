@@ -25,6 +25,14 @@ jobs:
           pip install -r requirements.txt
           pip install dvc[gs] mlflow
 
+      - name: Set up DVC remote credentials
+        run: |
+          dvc remote modify origin --local auth basic
+          dvc remote modify origin --local user "${{ secrets.DVC_USER }}"
+          dvc remote modify origin --local password "${{ secrets.DVC_PASSWORD }}"
+           
+
+
       - name: ⬇️ Pull data & models from DVC remote
         run: |
           dvc pull
@@ -34,3 +42,5 @@ jobs:
       - name: 🧪 Run DVC pipeline
         run: |
           dvc repro
+
+      
