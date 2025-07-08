@@ -2,9 +2,6 @@
 # Ignore all data folder contents
 # Ignore DVC cache (should be ignored)
 # Allow DVC-tracked data folder and file
-!data/
-!data/raw/
-!data/raw/productivity_data.csv.dvc
 
 
 
@@ -197,5 +194,8 @@ cython_debug/
 /models
 /mlruns
 
+!data/
+!data/raw/
+!data/raw/productivity_data.csv.dvc
 
 
