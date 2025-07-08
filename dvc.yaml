@@ -1,7 +1,6 @@
 stages:
   train:
-    cmd: python productivity_predictor/src/training/train_model.py
-
+    cmd: python src/training/train_model.py
     deps:
       - src/training/train_model.py
       - data/raw/productivity_data.csv
