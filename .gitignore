@@ -3,7 +3,7 @@
 /data/
 
 # But allow this DVC-tracked file
-!data/raw/productivity_data.csv.dvc
+
 
 # Mac OS-specific storage files
 .DS_Store
@@ -190,3 +190,5 @@ cython_debug/
 .pypirc
 /models
 /mlruns
+
+!data/raw/productivity_data.csv.dvc
