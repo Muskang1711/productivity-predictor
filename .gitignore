@@ -1,6 +1,8 @@
 # Data
 # Ignore all data folder contents
-/data/
+# Ignore DVC cache (should be ignored)
+.dvc/cache/
+
 
 # But allow this DVC-tracked file
 
