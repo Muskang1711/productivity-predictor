@@ -1,0 +1,6 @@
+train:
+  test_Size: 0.2
+  random_state: 42
+  n_Estimators: 100
+  model_list: ["LinearRegression", "RandomForest", "XGBoost"]
+  target: "productivity_score"
