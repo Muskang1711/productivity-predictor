@@ -82,7 +82,7 @@ instance/
 
 # MkDocs documentation
 docs/site/
-
+venv/
 # PyBuilder
 .pybuilder/
 target/
