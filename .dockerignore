@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+*.pkl
+*.pt
+*.csv
+*.xlsx
+data/
+#models/
+.dvc/
+.dvc/cache/
+notebooks/
+.env
+*.zip
+*.log
+venv/

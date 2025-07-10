@@ -6,6 +6,7 @@ import mlflow.sklearn
 import mlflow.xgboost
 from box import ConfigBox
 import yaml
+import joblib
 
 from sklearn.linear_model import LinearRegression
 from sklearn.ensemble import RandomForestRegressor
@@ -47,7 +48,8 @@ def train_and_log_model(model, model_name, X_train, X_test, y_train, y_test, y_t
             mlflow.xgboost.save_model(model, f"models/{model_name}_model")
         else:
             mlflow.sklearn.save_model(model, f"models/{model_name}_model")
-
+        
+        joblib.dump(model, "models/model.pkl")
         print(f"✅ {model_name} logged and saved to models/")
 
 
