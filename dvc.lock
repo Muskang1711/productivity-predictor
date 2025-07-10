@@ -13,16 +13,16 @@ stages:
       size: 162
     - path: src/training/train_model.py
       hash: md5
-      md5: a3d74467428ff287d7cedf7d5c2fff3f
-      size: 2777
+      md5: eddcbcea2a6b59c685003e8cf89ae9f9
+      size: 2848
     outs:
     - path: mlruns/
       hash: md5
-      md5: a675042c7548250a711339300bf23109.dir
-      size: 2056
+      md5: beeda326ec5fe3eb984b4ca43acc3611.dir
+      size: 2057
       nfiles: 31
     - path: models/
       hash: md5
-      md5: 18dab13a1e2e2c5d17bd412bd77130f8.dir
-      size: 3905926
-      nfiles: 15
+      md5: 56caef658eb0d84cc60152f7073dbba5.dir
+      size: 4191459
+      nfiles: 16

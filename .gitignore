@@ -199,3 +199,10 @@ cython_debug/
 !data/raw/productivity_data.csv.dvc
 
 
+__pycache__/
+*.pyc
+*.pkl
+*.pt
+models/
+.dvc/cache/
+*.log
