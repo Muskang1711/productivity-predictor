@@ -32,6 +32,21 @@ rag-meeting-assistant/
 │── README.md
 ```
 
+📊 Input Features
+Sleep hours
+
+Screen time (daily)
+
+Number of breaks
+
+Exercise level
+
+Stress level (1–10)
+
+Focus time (hours/day)
+
+📈 Output
+Productivity Label: Low, Medium, or High
 ---
 
 ## ⚙️ Installation & Usage
@@ -76,3 +91,4 @@ streamlit run app.py
 
 ## 📜 License
 This project is licensed under the **MIT License**.
+
