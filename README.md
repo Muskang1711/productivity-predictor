@@ -1,36 +1,70 @@
-# 🤖 RAG-Powered Meeting Assistant
+# 🧠 Productivity Predictor
 
-An intelligent **Retrieval-Augmented Generation (RAG)** based tool that helps you quickly query and summarize meeting transcripts.  
-Upload your meeting transcript, ask questions in natural language, and get precise, context-aware answers instantly.
-
----
-
-## 📌 Features
-- **Smart Q&A** – Ask questions about any uploaded meeting transcript.
-- **Context-Aware Retrieval** – Uses RAG to provide accurate answers from relevant transcript sections.
-- **Interactive UI** – Built with Streamlit for an intuitive user experience.
-- **Fast Processing** – Handles large transcripts efficiently.
-- **Secure** – API keys stored in environment variables.
+This is a machine learning-powered web application that predicts productivity level based on lifestyle inputs like sleep hours, screen time, breaks, and more.
 
 ---
 
-## 🛠 Tech Stack
-- **Python** – Core logic
-- **Streamlit** – Web interface
-- **LangChain / RAG** – Retrieval-augmented generation pipeline
-- **dotenv** – Secure API key loading
+## 🚀 Tech Stack
+- **Python**
+- **Scikit-learn**
+- **FastAPI**
+- **Docker**
+- **AWS EC2**
+- **DockerHub**
 
 ---
 
-## 📂 Project Structure
-```plaintext
-rag-meeting-assistant/
-│── app.py             # Streamlit app
-│── rag_core.py        # RAG pipeline logic
-│── requirements.txt   # Python dependencies
-│── .env               # API keys (not committed to GitHub)
-│── README.md
-```
+## 📦 Features
+- ML model (RandomForest) trained on realistic synthetic data  
+- FastAPI backend with auto-generated docs at `/docs`  
+- Dockerized for easy local and cloud deployment  
+- Hosted on AWS EC2 using a DockerHub image
+
+---
+
+## 📁 Project Structure
+.
+├── app/
+│ ├── main.py
+│ └── predict.py
+├── models/
+│ └── RandomForest_model/model.pkl
+├── Dockerfile
+├── requirements.txt
+└── README.md
+
+yaml
+Copy
+Edit
+
+---
+
+## 🛠️ How to Run
+
+### 🔧 Local
+```bash
+pip install -r requirements.txt
+uvicorn app.main:app --reload
+Open the API docs: http://127.0.0.1:8000/docs
+
+🐳 Docker
+bash
+Copy
+Edit
+docker build -t productivity-app .
+docker run -d -p 8000:8000 productivity-app
+Open: http://localhost:8000/docs
+
+☁️ AWS EC2 Deployment
+bash
+Copy
+Edit
+# Pull prebuilt image from DockerHub
+docker pull muskang1711/productivity-app
+
+# Run on EC2
+docker run -d -p 8000:8000 muskang1711/productivity-app
+Visit: http://<your-ec2-ip>:8000/docs
 
 📊 Input Features
 Sleep hours
@@ -47,48 +81,11 @@ Focus time (hours/day)
 
 📈 Output
 Productivity Label: Low, Medium, or High
----
 
-## ⚙️ Installation & Usage
+🙋‍♀️ Author
+Muskan Goyal
+DockerHub: muskang1711
+GitHub: https://github.com/Muskang1711/productivity-predictor
 
-### 1️⃣ Clone the Repository
-```bash
-git clone https://github.com/<username>/rag-meeting-assistant.git
-cd rag-meeting-assistant
-```
-
-### 2️⃣ Install Dependencies
-```bash
-pip install -r requirements.txt
-```
-
-### 3️⃣ Set API Key
-Create a `.env` file in the root folder and add your API key:
-```ini
-OPENAI_API_KEY=your_api_key_here
-```
-
-### 4️⃣ Run the App
-```bash
-streamlit run app.py
-```
-
----
-
-## 📈 How It Works
-1. **Upload Transcript** – Upload a `.txt` file of your meeting.
-2. **RAG Pipeline** – The transcript is processed, indexed, and stored for retrieval.
-3. **Ask Questions** – Enter your question in the text box.
-4. **Get Answers** – The system retrieves relevant chunks and generates a precise answer.
----
-
-## 🚀 Real-World Impact
-- Saves hours spent manually reviewing long meeting notes.
-- Ensures no key decision points are missed.
-- Improves productivity for teams, managers, and project stakeholders.
-
----
-
-## 📜 License
-This project is licensed under the **MIT License**.
-
+📜 License
+This project is licensed under the MIT License
